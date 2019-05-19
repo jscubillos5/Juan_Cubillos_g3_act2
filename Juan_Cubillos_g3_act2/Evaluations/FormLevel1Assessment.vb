@@ -1,5 +1,7 @@
 ﻿Public Class FormLevel1Assessment
 
+#Region "Declaración de variables y constantes Globales al formulario"
+
     Private minutes As Integer
     Private seconds As Integer
     Private Const MAX_SECONDS = 59
@@ -11,7 +13,11 @@
     Private setColorTime As Boolean
     Private showValidationMessage As Boolean
 
+#End Region
 
+#Region "Métodos y eventos para controlar el funcionamiento de la evaluación"
+
+    ' Método principal del formulario, JSCG, UNAD, 20190518
     Private Sub FormLevel1Assessment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         minutes = MAX_MINUTES
         seconds = MAX_SECONDS
@@ -24,6 +30,7 @@
         TimerFormLevel1Assessment.Start()
     End Sub
 
+    ' Evento ejecutado cada segundo, por el timer TimerFormLevel1Assessment, JSCG, UNAD, 20190518
     Private Sub TimerFormLevel1Assessment_Tick(sender As Object, e As EventArgs) Handles TimerFormLevel1Assessment.Tick
         seconds -= 1
         SetTimeLabelTimer()
@@ -44,14 +51,17 @@
         End If
     End Sub
 
+    ' Asignación del texto, que es mostrado al estudiante, para que este puede ver el tiempo restante, JSCG, UNAD, 20190518
     Private Sub SetTimeLabelTimer()
         LabelTimer.Text = String.Format("0" + minutes.ToString() + ":" + If(seconds < MIN_FORMAT_SECONDS, "0" + seconds.ToString(), seconds.ToString()))
     End Sub
 
+    ' Permite asignar el valor de cada respuesta seleccionada por el estudiante, JSCG, UNAD, 20190518
     Private Sub SetAnswer(position As Integer, value As Integer)
         studentAnswers(position) = value
     End Sub
 
+    ' Evento de pre-cierre del formulario, JSCG, UNAD, 20190518
     Private Sub FormLevel1Assessment_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If showValidationMessage Then
             Dim selection As DialogResult
@@ -64,10 +74,12 @@
         End If
     End Sub
 
+    ' Botón de salida manual, del estudiante, JSCG, UNAD, 20190518
     Private Sub ButtonExit_Click(sender As Object, e As EventArgs) Handles ButtonExit.Click
         Close()
     End Sub
 
+    ' Boton finalizar evaluación y continuar, JSCG, UNAD, 20190518
     Private Sub ButtonCompleteEvaluation_Click(sender As Object, e As EventArgs) Handles ButtonCompleteEvaluation.Click
         Dim selection As DialogResult
         selection = MessageBox.Show("¿Está seguro?, esto finaliza el intento.", "Confirmar finalizar intento", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -85,6 +97,7 @@
         End If
     End Sub
 
+    ' Permite procesar las respuestas digitadas por el estudiante, JSCG, UNAD, 20190518
     Private Sub ProcessAnswers()
         TimerFormLevel1Assessment.Stop()
         Dim countCorrectAnswers As Integer = 0
@@ -103,6 +116,10 @@
         Dim formShowResults = New FormShowResults(resultsAssesment, countCorrectAnswers)
         formShowResults.ShowDialog()
     End Sub
+
+#End Region
+
+#Region "Asignación respuestas por parte del estudiante"
 
     Private Sub RadioButtonOptionAFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAFirstQuestion.Click
         SetAnswer(0, 1)
@@ -263,4 +280,7 @@
     Private Sub RadioButtonOptionDTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDTenthQuestion.Click
         SetAnswer(9, 4)
     End Sub
+
+#End Region
+
 End Class
