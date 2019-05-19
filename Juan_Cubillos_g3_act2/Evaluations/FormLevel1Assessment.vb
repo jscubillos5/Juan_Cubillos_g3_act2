@@ -38,6 +38,9 @@
         If minutes = 0 And seconds = 0 Then
             TimerFormLevel1Assessment.Stop()
             MessageBox.Show("Fin por tiempo", "El tiempo para realizar la evaluación se ha terminado.", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            showValidationMessage = False
+            Close()
+            FormMain.Show()
         End If
     End Sub
 
@@ -73,91 +76,95 @@
             If notAnswer >= 1 Then
                 Dim validationAnswer As DialogResult
                 validationAnswer = MessageBox.Show("Existen preguntas sin responder, ¿Desea continuar?", "Preguntas sin responder", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If selection = vbYes Then
+                If validationAnswer = vbYes Then
                     ProcessAnswers()
                 End If
+            Else
+                ProcessAnswers()
             End If
         End If
     End Sub
 
     Private Sub ProcessAnswers()
+        TimerFormLevel1Assessment.Stop()
         Dim countCorrectAnswers As Integer = 0
         For i As Integer = 0 To studentAnswers.Length - 1
             Dim showResultAnswer = i + 1
             If studentAnswers(i) = correctAnswers(i) Then
                 countCorrectAnswers += 1
-                resultsAssesment(i) = String.Format("Respuesta correcta para la pregunta: " + showResultAnswer.ToString() + ", felicidades")
+                resultsAssesment(i) = String.Format("Respuesta correcta para la pregunta: " + showResultAnswer.ToString() + ", opción seleccionada: " + correctAnswers(i).ToString() + " felicidades")
             Else
-                resultsAssesment(i) = String.Format("Respuesta incorrecta para la pregunta: " + showResultAnswer.ToString() + ", respuesta correcta opción: " + studentAnswers(i).ToString())
+                resultsAssesment(i) = String.Format("Respuesta incorrecta para la pregunta: " + showResultAnswer.ToString() + ", respuesta correcta opción: " + correctAnswers(i).ToString())
             End If
         Next
         showValidationMessage = False
+        Hide()
         Close()
         Dim formShowResults = New FormShowResults(resultsAssesment, countCorrectAnswers)
         formShowResults.ShowDialog()
     End Sub
 
-    Private Sub RadioButtonOptionAFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAFirstQuestion.CheckedChanged
+    Private Sub RadioButtonOptionAFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAFirstQuestion.Click
         SetAnswer(0, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBFirstQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBFirstQuestion.Click
         SetAnswer(0, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCFirstQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCFirstQuestion.Click
         SetAnswer(0, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDFirstQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDFirstQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDFirstQuestion.Click
         SetAnswer(0, 4)
     End Sub
 
-    Private Sub RadioButtonOptionASecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionASecondQuestion.CheckedChanged
+    Private Sub RadioButtonOptionASecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionASecondQuestion.Click
         SetAnswer(1, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBSecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBSecondQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBSecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBSecondQuestion.Click
         SetAnswer(1, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCSecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCSecondQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCSecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCSecondQuestion.Click
         SetAnswer(1, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDSecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDSecondQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDSecondQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDSecondQuestion.Click
         SetAnswer(1, 4)
     End Sub
 
-    Private Sub RadioButtonOptionAThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAThirdQuestion.CheckedChanged
+    Private Sub RadioButtonOptionAThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAThirdQuestion.Click
         SetAnswer(2, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBThirdQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBThirdQuestion.Click
         SetAnswer(2, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCThirdQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCThirdQuestion.Click
         SetAnswer(2, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDThirdQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDThirdQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDThirdQuestion.Click
         SetAnswer(2, 4)
     End Sub
 
-    Private Sub RadioButtonOptionAFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAFourthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionAFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAFourthQuestion.Click
         SetAnswer(3, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBFourthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBFourthQuestion.Click
         SetAnswer(3, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCFourthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCFourthQuestion.Click
         SetAnswer(3, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDFourthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDFourthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDFourthQuestion.Click
         SetAnswer(3, 4)
     End Sub
 
@@ -177,83 +184,83 @@
         SetAnswer(4, 4)
     End Sub
 
-    Private Sub RadioButtonOptionASixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionASixthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionASixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionASixthQuestion.Click
         SetAnswer(5, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBSixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBSixthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBSixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBSixthQuestion.Click
         SetAnswer(5, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCSixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCSixthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCSixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCSixthQuestion.Click
         SetAnswer(5, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDSixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDSixthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDSixthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDSixthQuestion.Click
         SetAnswer(5, 4)
     End Sub
 
-    Private Sub RadioButtonOptionASeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionASeventhQuestion.CheckedChanged
+    Private Sub RadioButtonOptionASeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionASeventhQuestion.Click
         SetAnswer(6, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBSeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBSeventhQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBSeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBSeventhQuestion.Click
         SetAnswer(6, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCSeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCSeventhQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCSeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCSeventhQuestion.Click
         SetAnswer(6, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDSeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDSeventhQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDSeventhQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDSeventhQuestion.Click
         SetAnswer(6, 4)
     End Sub
 
-    Private Sub RadioButtonOptionAEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAEighthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionAEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionANinthQuestion.Click
         SetAnswer(7, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBEighthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBNinthQuestion.Click
         SetAnswer(7, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCEighthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCNinthQuestion.Click
         SetAnswer(7, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDEighthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDEighthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDNinthQuestion.Click
         SetAnswer(7, 4)
     End Sub
 
-    Private Sub RadioButtonOptionANinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionANinthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionANinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionAEighthQuestion.Click
         SetAnswer(8, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBNinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBNinthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBNinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBEighthQuestion.Click
         SetAnswer(8, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCNinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCNinthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCNinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCEighthQuestion.Click
         SetAnswer(8, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDNinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDNinthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDNinthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDEighthQuestion.Click
         SetAnswer(8, 4)
     End Sub
 
-    Private Sub RadioButtonOptionATenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionATenthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionATenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionATenthQuestion.Click
         SetAnswer(9, 1)
     End Sub
 
-    Private Sub RadioButtonOptionBTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBTenthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionBTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionBTenthQuestion.Click
         SetAnswer(9, 2)
     End Sub
 
-    Private Sub RadioButtonOptionCTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCTenthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionCTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionCTenthQuestion.Click
         SetAnswer(9, 3)
     End Sub
 
-    Private Sub RadioButtonOptionDTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDTenthQuestion.CheckedChanged
+    Private Sub RadioButtonOptionDTenthQuestion_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonOptionDTenthQuestion.Click
         SetAnswer(9, 4)
     End Sub
 End Class

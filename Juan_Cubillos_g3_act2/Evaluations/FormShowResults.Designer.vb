@@ -40,7 +40,7 @@ Partial Class FormShowResults
         Me.PanelResults.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelResults.Location = New System.Drawing.Point(0, 0)
         Me.PanelResults.Name = "PanelResults"
-        Me.PanelResults.Size = New System.Drawing.Size(615, 226)
+        Me.PanelResults.Size = New System.Drawing.Size(755, 250)
         Me.PanelResults.TabIndex = 0
         '
         'DataGridViewResults
@@ -57,7 +57,7 @@ Partial Class FormShowResults
         Me.DataGridViewResults.Name = "DataGridViewResults"
         Me.DataGridViewResults.ReadOnly = True
         Me.DataGridViewResults.RowTemplate.Height = 24
-        Me.DataGridViewResults.Size = New System.Drawing.Size(615, 226)
+        Me.DataGridViewResults.Size = New System.Drawing.Size(755, 250)
         Me.DataGridViewResults.TabIndex = 0
         '
         'PanelOptions
@@ -65,14 +65,14 @@ Partial Class FormShowResults
         Me.PanelOptions.Controls.Add(Me.LabelResult)
         Me.PanelOptions.Controls.Add(Me.ButtonValidate)
         Me.PanelOptions.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelOptions.Location = New System.Drawing.Point(0, 226)
+        Me.PanelOptions.Location = New System.Drawing.Point(0, 250)
         Me.PanelOptions.Name = "PanelOptions"
-        Me.PanelOptions.Size = New System.Drawing.Size(615, 115)
+        Me.PanelOptions.Size = New System.Drawing.Size(755, 85)
         Me.PanelOptions.TabIndex = 1
         '
         'ButtonValidate
         '
-        Me.ButtonValidate.Location = New System.Drawing.Point(260, 80)
+        Me.ButtonValidate.Location = New System.Drawing.Point(330, 50)
         Me.ButtonValidate.Name = "ButtonValidate"
         Me.ButtonValidate.Size = New System.Drawing.Size(95, 23)
         Me.ButtonValidate.TabIndex = 0
@@ -88,9 +88,10 @@ Partial Class FormShowResults
         'LabelResult
         '
         Me.LabelResult.AutoSize = True
-        Me.LabelResult.Location = New System.Drawing.Point(282, 30)
+        Me.LabelResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelResult.Location = New System.Drawing.Point(12, 14)
         Me.LabelResult.Name = "LabelResult"
-        Me.LabelResult.Size = New System.Drawing.Size(72, 17)
+        Me.LabelResult.Size = New System.Drawing.Size(81, 17)
         Me.LabelResult.TabIndex = 1
         Me.LabelResult.Text = "Resultado"
         '
@@ -98,7 +99,7 @@ Partial Class FormShowResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(615, 341)
+        Me.ClientSize = New System.Drawing.Size(755, 335)
         Me.Controls.Add(Me.PanelResults)
         Me.Controls.Add(Me.PanelOptions)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

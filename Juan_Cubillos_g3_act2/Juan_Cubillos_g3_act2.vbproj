@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Evaluations\FormLevel1Assessment.resx">
       <DependentUpon>FormLevel1Assessment.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Evaluations\FormLevel2Assessment.resx">
+      <DependentUpon>FormLevel2Assessment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Evaluations\FormShowResults.resx">
       <DependentUpon>FormShowResults.vb</DependentUpon>
     </EmbeddedResource>
