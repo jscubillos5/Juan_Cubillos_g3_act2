@@ -3,6 +3,7 @@
         Dim selection As DialogResult
         selection = MessageBox.Show("Buen día respetado estudiante." + vbCr + vbCr + "Al iniciar el examen solo contara con 3 minutos, por cada nivel." + "¿Desea continuar?", "Confirmar inicio evaluación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If selection = vbYes Then
+            Me.Hide()
             Dim formLevel1Assessment = New FormLevel1Assessment
             formLevel1Assessment.ShowDialog()
         Else
