@@ -34,7 +34,7 @@ Partial Class FormMain
         Me.MenuStripFormPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EvaluationStep2ToolStripMenuItem})
         Me.MenuStripFormPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripFormPrincipal.Name = "MenuStripFormPrincipal"
-        Me.MenuStripFormPrincipal.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStripFormPrincipal.Size = New System.Drawing.Size(536, 28)
         Me.MenuStripFormPrincipal.TabIndex = 0
         Me.MenuStripFormPrincipal.Text = "MenuStripFormMain"
         '
@@ -48,10 +48,11 @@ Partial Class FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(536, 92)
         Me.Controls.Add(Me.MenuStripFormPrincipal)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStripFormPrincipal
+        Me.MaximizeBox = False
         Me.Name = "FormMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Evaluación Paso 2: Diseño de módulos"

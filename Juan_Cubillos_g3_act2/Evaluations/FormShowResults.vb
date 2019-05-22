@@ -1,8 +1,16 @@
 ﻿Public Class FormShowResults
 
+#Region "Declaración de variables y constantes Globales al formulario"
+
     Private totalCorrectAnswersEstudent As Integer
     Private messageStudent As String = "Respetado estudiante, usted ha superado el primer nivel, por ende, sera enviado al segundo."
     Private Const MIN_CORRECT_ANSWERS_NEXT_LEVEL = 6
+
+#End Region
+
+#Region "Métodos y eventos para controlar el funcionamiento de la pantalla de resultados"
+
+    ' Método, que permite recibir variables; desde otros formularios, JSCG, UNAD, 20190521
     Public Sub New(ByVal resultsAssesment As String(), ByVal totalCorrectAnswers As Integer)
         InitializeComponent()
         totalCorrectAnswersEstudent = totalCorrectAnswers
@@ -19,6 +27,7 @@
         End If
     End Sub
 
+    ' Evento, de pre-cierre del formulario, JSCG, UNAD, 20190521
     Private Sub FormShowResults_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If totalCorrectAnswersEstudent >= MIN_CORRECT_ANSWERS_NEXT_LEVEL Then
             Dim selection As DialogResult
@@ -36,7 +45,11 @@
         End If
     End Sub
 
+    ' Boton, continuar, se envia al método close(), ya que este contiene la validación del segundo examen, JSCG, UNAD, 20190521
     Private Sub ButtonValidate_Click(sender As Object, e As EventArgs) Handles ButtonValidate.Click
         Close()
     End Sub
+
+#End Region
+
 End Class

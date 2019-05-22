@@ -1,4 +1,8 @@
 ﻿Public Class FormMain
+
+#Region "Métodos y eventos para controlar el funcionamiento de la evaluación"
+
+    ' Boton menu examenes del formulario principal, JSCG, UNAD, 20190518
     Private Sub EvaluationStep2ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EvaluationStep2ToolStripMenuItem.Click
         Dim selection As DialogResult
         selection = MessageBox.Show("Buen día respetado estudiante." + vbCr + vbCr + "Al iniciar el examen solo contara con 3 minutos, por cada nivel." + "¿Desea continuar?", "Confirmar inicio evaluación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -10,4 +14,7 @@
             MessageBox.Show("Usted ha cancelado el inicio de la evaluación.")
         End If
     End Sub
+
+#End Region
+
 End Class

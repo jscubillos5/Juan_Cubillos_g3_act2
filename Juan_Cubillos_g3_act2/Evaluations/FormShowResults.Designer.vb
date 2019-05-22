@@ -25,10 +25,10 @@ Partial Class FormShowResults
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormShowResults))
         Me.PanelResults = New System.Windows.Forms.Panel()
         Me.DataGridViewResults = New System.Windows.Forms.DataGridView()
-        Me.PanelOptions = New System.Windows.Forms.Panel()
-        Me.ButtonValidate = New System.Windows.Forms.Button()
         Me.ColumnResultAnswerQuestion = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PanelOptions = New System.Windows.Forms.Panel()
         Me.LabelResult = New System.Windows.Forms.Label()
+        Me.ButtonValidate = New System.Windows.Forms.Button()
         Me.PanelResults.SuspendLayout()
         CType(Me.DataGridViewResults, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelOptions.SuspendLayout()
@@ -60,6 +60,12 @@ Partial Class FormShowResults
         Me.DataGridViewResults.Size = New System.Drawing.Size(755, 250)
         Me.DataGridViewResults.TabIndex = 0
         '
+        'ColumnResultAnswerQuestion
+        '
+        Me.ColumnResultAnswerQuestion.HeaderText = "Resultados"
+        Me.ColumnResultAnswerQuestion.Name = "ColumnResultAnswerQuestion"
+        Me.ColumnResultAnswerQuestion.ReadOnly = True
+        '
         'PanelOptions
         '
         Me.PanelOptions.Controls.Add(Me.LabelResult)
@@ -70,21 +76,6 @@ Partial Class FormShowResults
         Me.PanelOptions.Size = New System.Drawing.Size(755, 85)
         Me.PanelOptions.TabIndex = 1
         '
-        'ButtonValidate
-        '
-        Me.ButtonValidate.Location = New System.Drawing.Point(330, 50)
-        Me.ButtonValidate.Name = "ButtonValidate"
-        Me.ButtonValidate.Size = New System.Drawing.Size(95, 23)
-        Me.ButtonValidate.TabIndex = 0
-        Me.ButtonValidate.Text = "Continuar"
-        Me.ButtonValidate.UseVisualStyleBackColor = True
-        '
-        'ColumnResultAnswerQuestion
-        '
-        Me.ColumnResultAnswerQuestion.HeaderText = "Resultados"
-        Me.ColumnResultAnswerQuestion.Name = "ColumnResultAnswerQuestion"
-        Me.ColumnResultAnswerQuestion.ReadOnly = True
-        '
         'LabelResult
         '
         Me.LabelResult.AutoSize = True
@@ -94,6 +85,15 @@ Partial Class FormShowResults
         Me.LabelResult.Size = New System.Drawing.Size(81, 17)
         Me.LabelResult.TabIndex = 1
         Me.LabelResult.Text = "Resultado"
+        '
+        'ButtonValidate
+        '
+        Me.ButtonValidate.Location = New System.Drawing.Point(330, 50)
+        Me.ButtonValidate.Name = "ButtonValidate"
+        Me.ButtonValidate.Size = New System.Drawing.Size(95, 23)
+        Me.ButtonValidate.TabIndex = 0
+        Me.ButtonValidate.Text = "Continuar"
+        Me.ButtonValidate.UseVisualStyleBackColor = True
         '
         'FormShowResults
         '
