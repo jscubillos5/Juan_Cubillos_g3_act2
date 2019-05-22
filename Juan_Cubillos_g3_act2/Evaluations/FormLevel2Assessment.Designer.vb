@@ -100,6 +100,7 @@ Partial Class FormLevel2Assessment
         Me.LabelSixthQuestion = New System.Windows.Forms.Label()
         Me.LabelQuestionValueSecondQuestion = New System.Windows.Forms.Label()
         Me.TimerFormLevel2Assessment = New System.Windows.Forms.Timer(Me.components)
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.PanelTime.SuspendLayout()
         Me.PanelQuestions.SuspendLayout()
         Me.GroupBoxThirdQuestion.SuspendLayout()
@@ -112,6 +113,7 @@ Partial Class FormLevel2Assessment
         Me.GroupBoxSeventhQuestion.SuspendLayout()
         Me.GroupBoxSecondQuestion.SuspendLayout()
         Me.GroupBoxSixthQuestion.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelTime
@@ -232,10 +234,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDThirdQuestion.AutoSize = True
         Me.RadioButtonOptionDThirdQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDThirdQuestion.Name = "RadioButtonOptionDThirdQuestion"
-        Me.RadioButtonOptionDThirdQuestion.Size = New System.Drawing.Size(89, 21)
+        Me.RadioButtonOptionDThirdQuestion.Size = New System.Drawing.Size(63, 21)
         Me.RadioButtonOptionDThirdQuestion.TabIndex = 3
         Me.RadioButtonOptionDThirdQuestion.TabStop = True
-        Me.RadioButtonOptionDThirdQuestion.Text = "4. $var1; "
+        Me.RadioButtonOptionDThirdQuestion.Text = "4. jsp"
         Me.RadioButtonOptionDThirdQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCThirdQuestion
@@ -243,10 +245,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCThirdQuestion.AutoSize = True
         Me.RadioButtonOptionCThirdQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCThirdQuestion.Name = "RadioButtonOptionCThirdQuestion"
-        Me.RadioButtonOptionCThirdQuestion.Size = New System.Drawing.Size(169, 21)
+        Me.RadioButtonOptionCThirdQuestion.Size = New System.Drawing.Size(67, 21)
         Me.RadioButtonOptionCThirdQuestion.TabIndex = 2
         Me.RadioButtonOptionCThirdQuestion.TabStop = True
-        Me.RadioButtonOptionCThirdQuestion.Text = "3. Dim As Integer var1"
+        Me.RadioButtonOptionCThirdQuestion.Text = "3. exe"
         Me.RadioButtonOptionCThirdQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBThirdQuestion
@@ -254,10 +256,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBThirdQuestion.AutoSize = True
         Me.RadioButtonOptionBThirdQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBThirdQuestion.Name = "RadioButtonOptionBThirdQuestion"
-        Me.RadioButtonOptionBThirdQuestion.Size = New System.Drawing.Size(96, 21)
+        Me.RadioButtonOptionBThirdQuestion.Size = New System.Drawing.Size(60, 21)
         Me.RadioButtonOptionBThirdQuestion.TabIndex = 1
         Me.RadioButtonOptionBThirdQuestion.TabStop = True
-        Me.RadioButtonOptionBThirdQuestion.Text = "2. int var1;"
+        Me.RadioButtonOptionBThirdQuestion.Text = "2. vb"
         Me.RadioButtonOptionBThirdQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionAThirdQuestion
@@ -265,10 +267,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionAThirdQuestion.AutoSize = True
         Me.RadioButtonOptionAThirdQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionAThirdQuestion.Name = "RadioButtonOptionAThirdQuestion"
-        Me.RadioButtonOptionAThirdQuestion.Size = New System.Drawing.Size(169, 21)
+        Me.RadioButtonOptionAThirdQuestion.Size = New System.Drawing.Size(62, 21)
         Me.RadioButtonOptionAThirdQuestion.TabIndex = 0
         Me.RadioButtonOptionAThirdQuestion.TabStop = True
-        Me.RadioButtonOptionAThirdQuestion.Text = "1. Dim var1 As Integer"
+        Me.RadioButtonOptionAThirdQuestion.Text = "1. cls"
         Me.RadioButtonOptionAThirdQuestion.UseVisualStyleBackColor = True
         '
         'LabelQuestionValueNinthQuestion
@@ -375,10 +377,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDFirstQuestion.AutoSize = True
         Me.RadioButtonOptionDFirstQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDFirstQuestion.Name = "RadioButtonOptionDFirstQuestion"
-        Me.RadioButtonOptionDFirstQuestion.Size = New System.Drawing.Size(75, 21)
+        Me.RadioButtonOptionDFirstQuestion.Size = New System.Drawing.Size(164, 21)
         Me.RadioButtonOptionDFirstQuestion.TabIndex = 3
         Me.RadioButtonOptionDFirstQuestion.TabStop = True
-        Me.RadioButtonOptionDFirstQuestion.Text = "4. Flujo"
+        Me.RadioButtonOptionDFirstQuestion.Text = "4. Validar un proceso"
         Me.RadioButtonOptionDFirstQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCFirstQuestion
@@ -386,10 +388,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCFirstQuestion.AutoSize = True
         Me.RadioButtonOptionCFirstQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCFirstQuestion.Name = "RadioButtonOptionCFirstQuestion"
-        Me.RadioButtonOptionCFirstQuestion.Size = New System.Drawing.Size(99, 21)
+        Me.RadioButtonOptionCFirstQuestion.Size = New System.Drawing.Size(175, 21)
         Me.RadioButtonOptionCFirstQuestion.TabIndex = 2
         Me.RadioButtonOptionCFirstQuestion.TabStop = True
-        Me.RadioButtonOptionCFirstQuestion.Text = "3. Decisión"
+        Me.RadioButtonOptionCFirstQuestion.Text = "3. Proteger de un error"
         Me.RadioButtonOptionCFirstQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBFirstQuestion
@@ -397,10 +399,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBFirstQuestion.AutoSize = True
         Me.RadioButtonOptionBFirstQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBFirstQuestion.Name = "RadioButtonOptionBFirstQuestion"
-        Me.RadioButtonOptionBFirstQuestion.Size = New System.Drawing.Size(97, 21)
+        Me.RadioButtonOptionBFirstQuestion.Size = New System.Drawing.Size(156, 21)
         Me.RadioButtonOptionBFirstQuestion.TabIndex = 1
         Me.RadioButtonOptionBFirstQuestion.TabStop = True
-        Me.RadioButtonOptionBFirstQuestion.Text = "2. Proceso"
+        Me.RadioButtonOptionBFirstQuestion.Text = "2. Validar formulario"
         Me.RadioButtonOptionBFirstQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionAFirstQuestion
@@ -408,10 +410,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionAFirstQuestion.AutoSize = True
         Me.RadioButtonOptionAFirstQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionAFirstQuestion.Name = "RadioButtonOptionAFirstQuestion"
-        Me.RadioButtonOptionAFirstQuestion.Size = New System.Drawing.Size(95, 21)
+        Me.RadioButtonOptionAFirstQuestion.Size = New System.Drawing.Size(218, 21)
         Me.RadioButtonOptionAFirstQuestion.TabIndex = 0
         Me.RadioButtonOptionAFirstQuestion.TabStop = True
-        Me.RadioButtonOptionAFirstQuestion.Text = "1. Iterativa"
+        Me.RadioButtonOptionAFirstQuestion.Text = "1. Notificar un error al usuario"
         Me.RadioButtonOptionAFirstQuestion.UseVisualStyleBackColor = True
         '
         'LabelQuestionValueEighthQuestion
@@ -442,10 +444,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDFifthQuestion.AutoSize = True
         Me.RadioButtonOptionDFifthQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDFifthQuestion.Name = "RadioButtonOptionDFifthQuestion"
-        Me.RadioButtonOptionDFifthQuestion.Size = New System.Drawing.Size(84, 21)
+        Me.RadioButtonOptionDFifthQuestion.Size = New System.Drawing.Size(145, 21)
         Me.RadioButtonOptionDFifthQuestion.TabIndex = 3
         Me.RadioButtonOptionDFifthQuestion.TabStop = True
-        Me.RadioButtonOptionDFifthQuestion.Text = "4. Stop()"
+        Me.RadioButtonOptionDFifthQuestion.Text = "4. Visual Basic 6.0"
         Me.RadioButtonOptionDFifthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCFifthQuestion
@@ -453,10 +455,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCFifthQuestion.AutoSize = True
         Me.RadioButtonOptionCFifthQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCFifthQuestion.Name = "RadioButtonOptionCFifthQuestion"
-        Me.RadioButtonOptionCFifthQuestion.Size = New System.Drawing.Size(139, 21)
+        Me.RadioButtonOptionCFifthQuestion.Size = New System.Drawing.Size(145, 21)
         Me.RadioButtonOptionCFifthQuestion.TabIndex = 2
         Me.RadioButtonOptionCFifthQuestion.TabStop = True
-        Me.RadioButtonOptionCFifthQuestion.Text = "3. Enable = False"
+        Me.RadioButtonOptionCFifthQuestion.Text = "3. Visual Basic 5.0"
         Me.RadioButtonOptionCFifthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBFifthQuestion
@@ -464,10 +466,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBFifthQuestion.AutoSize = True
         Me.RadioButtonOptionBFifthQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBFifthQuestion.Name = "RadioButtonOptionBFifthQuestion"
-        Me.RadioButtonOptionBFifthQuestion.Size = New System.Drawing.Size(88, 21)
+        Me.RadioButtonOptionBFifthQuestion.Size = New System.Drawing.Size(145, 21)
         Me.RadioButtonOptionBFifthQuestion.TabIndex = 1
         Me.RadioButtonOptionBFifthQuestion.TabStop = True
-        Me.RadioButtonOptionBFifthQuestion.Text = "2. Stop();"
+        Me.RadioButtonOptionBFifthQuestion.Text = "2. Visual Basic 6.1"
         Me.RadioButtonOptionBFifthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionAFifthQuestion
@@ -475,10 +477,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionAFifthQuestion.AutoSize = True
         Me.RadioButtonOptionAFifthQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionAFifthQuestion.Name = "RadioButtonOptionAFifthQuestion"
-        Me.RadioButtonOptionAFifthQuestion.Size = New System.Drawing.Size(95, 21)
+        Me.RadioButtonOptionAFifthQuestion.Size = New System.Drawing.Size(205, 21)
         Me.RadioButtonOptionAFifthQuestion.TabIndex = 0
         Me.RadioButtonOptionAFifthQuestion.TabStop = True
-        Me.RadioButtonOptionAFifthQuestion.Text = "1. Pause()"
+        Me.RadioButtonOptionAFifthQuestion.Text = "1. Visual Basic 8.03.58.12.2"
         Me.RadioButtonOptionAFifthQuestion.UseVisualStyleBackColor = True
         '
         'GroupBoxNinthQuestion
@@ -563,9 +565,9 @@ Partial Class FormLevel2Assessment
         Me.LabelFifthQuestion.AutoSize = True
         Me.LabelFifthQuestion.Location = New System.Drawing.Point(8, 793)
         Me.LabelFifthQuestion.Name = "LabelFifthQuestion"
-        Me.LabelFifthQuestion.Size = New System.Drawing.Size(369, 17)
+        Me.LabelFifthQuestion.Size = New System.Drawing.Size(400, 17)
         Me.LabelFifthQuestion.TabIndex = 12
-        Me.LabelFifthQuestion.Text = "5. ¿Qué método detiene un objeto System.Timers.Timer?"
+        Me.LabelFifthQuestion.Text = "5. ¿En que versión de VB fue escrito ""Microsoft AntiSpyware""?"
         '
         'LabelQuestionValueSeventhQuestion
         '
@@ -582,9 +584,9 @@ Partial Class FormLevel2Assessment
         Me.LabelFirstQuestion.AutoSize = True
         Me.LabelFirstQuestion.Location = New System.Drawing.Point(8, 37)
         Me.LabelFirstQuestion.Name = "LabelFirstQuestion"
-        Me.LabelFirstQuestion.Size = New System.Drawing.Size(359, 17)
+        Me.LabelFirstQuestion.Size = New System.Drawing.Size(341, 17)
         Me.LabelFirstQuestion.TabIndex = 8
-        Me.LabelFirstQuestion.Text = "1. La estructura de control IF, es un condicional de tipo:"
+        Me.LabelFirstQuestion.Text = "1. El objeto System.Windows.ErrorProvider, permite::"
         '
         'GroupBoxEighthQuestion
         '
@@ -667,9 +669,9 @@ Partial Class FormLevel2Assessment
         Me.LabelSecondQuestion.AutoSize = True
         Me.LabelSecondQuestion.Location = New System.Drawing.Point(8, 221)
         Me.LabelSecondQuestion.Name = "LabelSecondQuestion"
-        Me.LabelSecondQuestion.Size = New System.Drawing.Size(369, 17)
+        Me.LabelSecondQuestion.Size = New System.Drawing.Size(265, 17)
         Me.LabelSecondQuestion.TabIndex = 11
-        Me.LabelSecondQuestion.Text = "2. La primera versión de Visual Basic, aparece en el año:"
+        Me.LabelSecondQuestion.Text = "2. El sistema de tipos de Visual Basic es:"
         '
         'LabelQuestionValueSixthQuestion
         '
@@ -699,10 +701,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDFourthQuestion.AutoSize = True
         Me.RadioButtonOptionDFourthQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDFourthQuestion.Name = "RadioButtonOptionDFourthQuestion"
-        Me.RadioButtonOptionDFourthQuestion.Size = New System.Drawing.Size(67, 21)
+        Me.RadioButtonOptionDFourthQuestion.Size = New System.Drawing.Size(123, 21)
         Me.RadioButtonOptionDFourthQuestion.TabIndex = 3
         Me.RadioButtonOptionDFourthQuestion.TabStop = True
-        Me.RadioButtonOptionDFourthQuestion.Text = "4. dim"
+        Me.RadioButtonOptionDFourthQuestion.Text = "4. FormClosing"
         Me.RadioButtonOptionDFourthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCFourthQuestion
@@ -710,10 +712,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCFourthQuestion.AutoSize = True
         Me.RadioButtonOptionCFourthQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCFourthQuestion.Name = "RadioButtonOptionCFourthQuestion"
-        Me.RadioButtonOptionCFourthQuestion.Size = New System.Drawing.Size(91, 21)
+        Me.RadioButtonOptionCFourthQuestion.Size = New System.Drawing.Size(74, 21)
         Me.RadioButtonOptionCFourthQuestion.TabIndex = 2
         Me.RadioButtonOptionCFourthQuestion.TabStop = True
-        Me.RadioButtonOptionCFourthQuestion.Text = "3. $scope"
+        Me.RadioButtonOptionCFourthQuestion.Text = "3. Click"
         Me.RadioButtonOptionCFourthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBFourthQuestion
@@ -721,10 +723,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBFourthQuestion.AutoSize = True
         Me.RadioButtonOptionBFourthQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBFourthQuestion.Name = "RadioButtonOptionBFourthQuestion"
-        Me.RadioButtonOptionBFourthQuestion.Size = New System.Drawing.Size(69, 21)
+        Me.RadioButtonOptionBFourthQuestion.Size = New System.Drawing.Size(84, 21)
         Me.RadioButtonOptionBFourthQuestion.TabIndex = 1
         Me.RadioButtonOptionBFourthQuestion.TabStop = True
-        Me.RadioButtonOptionBFourthQuestion.Text = "2. Dim"
+        Me.RadioButtonOptionBFourthQuestion.Text = "2. Leave"
         Me.RadioButtonOptionBFourthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionAFourthQuestion
@@ -732,10 +734,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionAFourthQuestion.AutoSize = True
         Me.RadioButtonOptionAFourthQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionAFourthQuestion.Name = "RadioButtonOptionAFourthQuestion"
-        Me.RadioButtonOptionAFourthQuestion.Size = New System.Drawing.Size(65, 21)
+        Me.RadioButtonOptionAFourthQuestion.Size = New System.Drawing.Size(86, 21)
         Me.RadioButtonOptionAFourthQuestion.TabIndex = 0
         Me.RadioButtonOptionAFourthQuestion.TabStop = True
-        Me.RadioButtonOptionAFourthQuestion.Text = "1. var"
+        Me.RadioButtonOptionAFourthQuestion.Text = "1. OnExit"
         Me.RadioButtonOptionAFourthQuestion.UseVisualStyleBackColor = True
         '
         'GroupBoxSeventhQuestion
@@ -756,10 +758,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDSeventhQuestion.AutoSize = True
         Me.RadioButtonOptionDSeventhQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDSeventhQuestion.Name = "RadioButtonOptionDSeventhQuestion"
-        Me.RadioButtonOptionDSeventhQuestion.Size = New System.Drawing.Size(129, 21)
+        Me.RadioButtonOptionDSeventhQuestion.Size = New System.Drawing.Size(77, 21)
         Me.RadioButtonOptionDSeventhQuestion.TabIndex = 3
         Me.RadioButtonOptionDSeventhQuestion.TabStop = True
-        Me.RadioButtonOptionDSeventhQuestion.Text = "4. ShowDialog()"
+        Me.RadioButtonOptionDSeventhQuestion.Text = "4. 2019"
         Me.RadioButtonOptionDSeventhQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCSeventhQuestion
@@ -767,10 +769,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCSeventhQuestion.AutoSize = True
         Me.RadioButtonOptionCSeventhQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCSeventhQuestion.Name = "RadioButtonOptionCSeventhQuestion"
-        Me.RadioButtonOptionCSeventhQuestion.Size = New System.Drawing.Size(113, 21)
+        Me.RadioButtonOptionCSeventhQuestion.Size = New System.Drawing.Size(77, 21)
         Me.RadioButtonOptionCSeventhQuestion.TabIndex = 2
         Me.RadioButtonOptionCSeventhQuestion.TabStop = True
-        Me.RadioButtonOptionCSeventhQuestion.Text = "3. Me.Close()"
+        Me.RadioButtonOptionCSeventhQuestion.Text = "3. 2006"
         Me.RadioButtonOptionCSeventhQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBSeventhQuestion
@@ -778,10 +780,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBSeventhQuestion.AutoSize = True
         Me.RadioButtonOptionBSeventhQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBSeventhQuestion.Name = "RadioButtonOptionBSeventhQuestion"
-        Me.RadioButtonOptionBSeventhQuestion.Size = New System.Drawing.Size(107, 21)
+        Me.RadioButtonOptionBSeventhQuestion.Size = New System.Drawing.Size(77, 21)
         Me.RadioButtonOptionBSeventhQuestion.TabIndex = 1
         Me.RadioButtonOptionBSeventhQuestion.TabStop = True
-        Me.RadioButtonOptionBSeventhQuestion.Text = "2. Me.Hide()"
+        Me.RadioButtonOptionBSeventhQuestion.Text = "2. 2008"
         Me.RadioButtonOptionBSeventhQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionASeventhQuestion
@@ -789,10 +791,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionASeventhQuestion.AutoSize = True
         Me.RadioButtonOptionASeventhQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionASeventhQuestion.Name = "RadioButtonOptionASeventhQuestion"
-        Me.RadioButtonOptionASeventhQuestion.Size = New System.Drawing.Size(90, 21)
+        Me.RadioButtonOptionASeventhQuestion.Size = New System.Drawing.Size(77, 21)
         Me.RadioButtonOptionASeventhQuestion.TabIndex = 0
         Me.RadioButtonOptionASeventhQuestion.TabStop = True
-        Me.RadioButtonOptionASeventhQuestion.Text = "1. Close()"
+        Me.RadioButtonOptionASeventhQuestion.Text = "1. 2007"
         Me.RadioButtonOptionASeventhQuestion.UseVisualStyleBackColor = True
         '
         'GroupBoxSecondQuestion
@@ -813,10 +815,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDSecondQuestion.AutoSize = True
         Me.RadioButtonOptionDSecondQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDSecondQuestion.Name = "RadioButtonOptionDSecondQuestion"
-        Me.RadioButtonOptionDSecondQuestion.Size = New System.Drawing.Size(77, 21)
+        Me.RadioButtonOptionDSecondQuestion.Size = New System.Drawing.Size(101, 21)
         Me.RadioButtonOptionDSecondQuestion.TabIndex = 3
         Me.RadioButtonOptionDSecondQuestion.TabStop = True
-        Me.RadioButtonOptionDSecondQuestion.Text = "4. 1992"
+        Me.RadioButtonOptionDSecondQuestion.Text = "4. Aleatorío"
         Me.RadioButtonOptionDSecondQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCSecondQuestion
@@ -824,10 +826,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCSecondQuestion.AutoSize = True
         Me.RadioButtonOptionCSecondQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCSecondQuestion.Name = "RadioButtonOptionCSecondQuestion"
-        Me.RadioButtonOptionCSecondQuestion.Size = New System.Drawing.Size(77, 21)
+        Me.RadioButtonOptionCSecondQuestion.Size = New System.Drawing.Size(130, 21)
         Me.RadioButtonOptionCSecondQuestion.TabIndex = 2
         Me.RadioButtonOptionCSecondQuestion.TabStop = True
-        Me.RadioButtonOptionCSecondQuestion.Text = "3. 1980"
+        Me.RadioButtonOptionCSecondQuestion.Text = "3. Tipado fuerte"
         Me.RadioButtonOptionCSecondQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBSecondQuestion
@@ -835,10 +837,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBSecondQuestion.AutoSize = True
         Me.RadioButtonOptionBSecondQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBSecondQuestion.Name = "RadioButtonOptionBSecondQuestion"
-        Me.RadioButtonOptionBSecondQuestion.Size = New System.Drawing.Size(77, 21)
+        Me.RadioButtonOptionBSecondQuestion.Size = New System.Drawing.Size(103, 21)
         Me.RadioButtonOptionBSecondQuestion.TabIndex = 1
         Me.RadioButtonOptionBSecondQuestion.TabStop = True
-        Me.RadioButtonOptionBSecondQuestion.Text = "2. 1991"
+        Me.RadioButtonOptionBSecondQuestion.Text = "2. Dinamico"
         Me.RadioButtonOptionBSecondQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionASecondQuestion
@@ -846,10 +848,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionASecondQuestion.AutoSize = True
         Me.RadioButtonOptionASecondQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionASecondQuestion.Name = "RadioButtonOptionASecondQuestion"
-        Me.RadioButtonOptionASecondQuestion.Size = New System.Drawing.Size(77, 21)
+        Me.RadioButtonOptionASecondQuestion.Size = New System.Drawing.Size(123, 21)
         Me.RadioButtonOptionASecondQuestion.TabIndex = 0
         Me.RadioButtonOptionASecondQuestion.TabStop = True
-        Me.RadioButtonOptionASecondQuestion.Text = "1. 2000"
+        Me.RadioButtonOptionASecondQuestion.Text = "1. Tipado debil"
         Me.RadioButtonOptionASecondQuestion.UseVisualStyleBackColor = True
         '
         'LabelSeventhQuestion
@@ -857,18 +859,18 @@ Partial Class FormLevel2Assessment
         Me.LabelSeventhQuestion.AutoSize = True
         Me.LabelSeventhQuestion.Location = New System.Drawing.Point(491, 221)
         Me.LabelSeventhQuestion.Name = "LabelSeventhQuestion"
-        Me.LabelSeventhQuestion.Size = New System.Drawing.Size(422, 17)
+        Me.LabelSeventhQuestion.Size = New System.Drawing.Size(361, 17)
         Me.LabelSeventhQuestion.TabIndex = 9
-        Me.LabelSeventhQuestion.Text = "7. ¿Como se debe cerrar un objeto de tipo Sytem.Windows.Form?"
+        Me.LabelSeventhQuestion.Text = "7. ¿Hasta que año dio Microsoft soporte a Visual Basic?"
         '
         'LabelFourthQuestion
         '
         Me.LabelFourthQuestion.AutoSize = True
         Me.LabelFourthQuestion.Location = New System.Drawing.Point(8, 599)
         Me.LabelFourthQuestion.Name = "LabelFourthQuestion"
-        Me.LabelFourthQuestion.Size = New System.Drawing.Size(454, 17)
+        Me.LabelFourthQuestion.Size = New System.Drawing.Size(377, 17)
         Me.LabelFourthQuestion.TabIndex = 6
-        Me.LabelFourthQuestion.Text = "4. ¿Qué palabra reservada en Visual Basic, permite asignar variables?"
+        Me.LabelFourthQuestion.Text = "4. ¿Qué evento ocurre al dejar un control en Visual Basic?"
         '
         'GroupBoxSixthQuestion
         '
@@ -888,10 +890,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionDSixthQuestion.AutoSize = True
         Me.RadioButtonOptionDSixthQuestion.Location = New System.Drawing.Point(283, 62)
         Me.RadioButtonOptionDSixthQuestion.Name = "RadioButtonOptionDSixthQuestion"
-        Me.RadioButtonOptionDSixthQuestion.Size = New System.Drawing.Size(115, 21)
+        Me.RadioButtonOptionDSixthQuestion.Size = New System.Drawing.Size(139, 21)
         Me.RadioButtonOptionDSixthQuestion.TabIndex = 3
         Me.RadioButtonOptionDSixthQuestion.TabStop = True
-        Me.RadioButtonOptionDSixthQuestion.Text = "4. class Area:"
+        Me.RadioButtonOptionDSixthQuestion.Text = "4. FormClosinged"
         Me.RadioButtonOptionDSixthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionCSixthQuestion
@@ -899,10 +901,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionCSixthQuestion.AutoSize = True
         Me.RadioButtonOptionCSixthQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCSixthQuestion.Name = "RadioButtonOptionCSixthQuestion"
-        Me.RadioButtonOptionCSixthQuestion.Size = New System.Drawing.Size(155, 21)
+        Me.RadioButtonOptionCSixthQuestion.Size = New System.Drawing.Size(123, 21)
         Me.RadioButtonOptionCSixthQuestion.TabIndex = 2
         Me.RadioButtonOptionCSixthQuestion.TabStop = True
-        Me.RadioButtonOptionCSixthQuestion.Text = "3. Public Class Area"
+        Me.RadioButtonOptionCSixthQuestion.Text = "3. FormClosing"
         Me.RadioButtonOptionCSixthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBSixthQuestion
@@ -910,10 +912,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionBSixthQuestion.AutoSize = True
         Me.RadioButtonOptionBSixthQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBSixthQuestion.Name = "RadioButtonOptionBSixthQuestion"
-        Me.RadioButtonOptionBSixthQuestion.Size = New System.Drawing.Size(106, 21)
+        Me.RadioButtonOptionBSixthQuestion.Size = New System.Drawing.Size(133, 21)
         Me.RadioButtonOptionBSixthQuestion.TabIndex = 1
         Me.RadioButtonOptionBSixthQuestion.TabStop = True
-        Me.RadioButtonOptionBSixthQuestion.Text = "2. unit Area;"
+        Me.RadioButtonOptionBSixthQuestion.Text = "2. FormClosured"
         Me.RadioButtonOptionBSixthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionASixthQuestion
@@ -921,10 +923,10 @@ Partial Class FormLevel2Assessment
         Me.RadioButtonOptionASixthQuestion.AutoSize = True
         Me.RadioButtonOptionASixthQuestion.Location = New System.Drawing.Point(18, 21)
         Me.RadioButtonOptionASixthQuestion.Name = "RadioButtonOptionASixthQuestion"
-        Me.RadioButtonOptionASixthQuestion.Size = New System.Drawing.Size(113, 21)
+        Me.RadioButtonOptionASixthQuestion.Size = New System.Drawing.Size(112, 21)
         Me.RadioButtonOptionASixthQuestion.TabIndex = 0
         Me.RadioButtonOptionASixthQuestion.TabStop = True
-        Me.RadioButtonOptionASixthQuestion.Text = "1. Class Area"
+        Me.RadioButtonOptionASixthQuestion.Text = "1. FormClose"
         Me.RadioButtonOptionASixthQuestion.UseVisualStyleBackColor = True
         '
         'LabelThirdQuestion
@@ -932,18 +934,18 @@ Partial Class FormLevel2Assessment
         Me.LabelThirdQuestion.AutoSize = True
         Me.LabelThirdQuestion.Location = New System.Drawing.Point(8, 410)
         Me.LabelThirdQuestion.Name = "LabelThirdQuestion"
-        Me.LabelThirdQuestion.Size = New System.Drawing.Size(369, 17)
+        Me.LabelThirdQuestion.Size = New System.Drawing.Size(352, 17)
         Me.LabelThirdQuestion.TabIndex = 4
-        Me.LabelThirdQuestion.Text = "3. ¿Cómo se debe declarar una variable en Visual Basic?"
+        Me.LabelThirdQuestion.Text = "3. ¿Cuál es la extensión de las clases de Visual Basic?"
         '
         'LabelSixthQuestion
         '
         Me.LabelSixthQuestion.AutoSize = True
         Me.LabelSixthQuestion.Location = New System.Drawing.Point(491, 37)
         Me.LabelSixthQuestion.Name = "LabelSixthQuestion"
-        Me.LabelSixthQuestion.Size = New System.Drawing.Size(413, 17)
+        Me.LabelSixthQuestion.Size = New System.Drawing.Size(277, 17)
         Me.LabelSixthQuestion.TabIndex = 10
-        Me.LabelSixthQuestion.Text = "6. ¿De qué forma están predefinidas las clases en Visual Basic?"
+        Me.LabelSixthQuestion.Text = "6. ¿El método Close() qué evento ejecuta?"
         '
         'LabelQuestionValueSecondQuestion
         '
@@ -958,6 +960,10 @@ Partial Class FormLevel2Assessment
         'TimerFormLevel2Assessment
         '
         Me.TimerFormLevel2Assessment.Interval = 1000
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
         '
         'FormLevel2Assessment
         '
@@ -999,6 +1005,7 @@ Partial Class FormLevel2Assessment
         Me.GroupBoxSecondQuestion.PerformLayout()
         Me.GroupBoxSixthQuestion.ResumeLayout(False)
         Me.GroupBoxSixthQuestion.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1079,4 +1086,5 @@ Partial Class FormLevel2Assessment
     Friend WithEvents LabelSixthQuestion As Label
     Friend WithEvents LabelQuestionValueSecondQuestion As Label
     Friend WithEvents TimerFormLevel2Assessment As Timer
+    Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

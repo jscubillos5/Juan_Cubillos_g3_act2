@@ -23,7 +23,7 @@
         minutes = MAX_MINUTES
         seconds = MAX_SECONDS
         studentAnswers = New Integer(9) {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-        correctAnswers = New Integer(9) {3, 2, 1, 2, 4, 3, 1, 2, 3, 1}
+        correctAnswers = New Integer(9) {1, 3, 2, 2, 4, 3, 2, 2, 3, 1}
         resultsAssesment = New String(9) {"Sin responder", "Sin responder", "Sin responder", "Sin responder", "Sin responder", "Sin responder", "Sin responder", "Sin responder", "Sin responder", "Sin responder"}
         setColorTime = True
         showValidationMessage = True
