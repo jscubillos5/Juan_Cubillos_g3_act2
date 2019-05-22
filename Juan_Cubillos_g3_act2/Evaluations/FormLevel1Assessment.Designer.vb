@@ -25,6 +25,8 @@ Partial Class FormLevel1Assessment
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLevel1Assessment))
         Me.PanelTime = New System.Windows.Forms.Panel()
+        Me.ButtonExit = New System.Windows.Forms.Button()
+        Me.ButtonCompleteEvaluation = New System.Windows.Forms.Button()
         Me.LabelTimer = New System.Windows.Forms.Label()
         Me.TimerFormLevel1Assessment = New System.Windows.Forms.Timer(Me.components)
         Me.PanelQuestions = New System.Windows.Forms.Panel()
@@ -98,8 +100,6 @@ Partial Class FormLevel1Assessment
         Me.LabelThirdQuestion = New System.Windows.Forms.Label()
         Me.LabelSixthQuestion = New System.Windows.Forms.Label()
         Me.LabelQuestionValueSecondQuestion = New System.Windows.Forms.Label()
-        Me.ButtonExit = New System.Windows.Forms.Button()
-        Me.ButtonCompleteEvaluation = New System.Windows.Forms.Button()
         Me.PanelTime.SuspendLayout()
         Me.PanelQuestions.SuspendLayout()
         Me.GroupBoxThirdQuestion.SuspendLayout()
@@ -125,6 +125,24 @@ Partial Class FormLevel1Assessment
         Me.PanelTime.Name = "PanelTime"
         Me.PanelTime.Size = New System.Drawing.Size(200, 938)
         Me.PanelTime.TabIndex = 0
+        '
+        'ButtonExit
+        '
+        Me.ButtonExit.Location = New System.Drawing.Point(106, 106)
+        Me.ButtonExit.Name = "ButtonExit"
+        Me.ButtonExit.Size = New System.Drawing.Size(84, 23)
+        Me.ButtonExit.TabIndex = 0
+        Me.ButtonExit.Text = "Salir"
+        Me.ButtonExit.UseVisualStyleBackColor = True
+        '
+        'ButtonCompleteEvaluation
+        '
+        Me.ButtonCompleteEvaluation.Location = New System.Drawing.Point(106, 153)
+        Me.ButtonCompleteEvaluation.Name = "ButtonCompleteEvaluation"
+        Me.ButtonCompleteEvaluation.Size = New System.Drawing.Size(84, 23)
+        Me.ButtonCompleteEvaluation.TabIndex = 1
+        Me.ButtonCompleteEvaluation.Text = "Finalizar"
+        Me.ButtonCompleteEvaluation.UseVisualStyleBackColor = True
         '
         'LabelTimer
         '
@@ -450,10 +468,10 @@ Partial Class FormLevel1Assessment
         Me.RadioButtonOptionBFifthQuestion.AutoSize = True
         Me.RadioButtonOptionBFifthQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBFifthQuestion.Name = "RadioButtonOptionBFifthQuestion"
-        Me.RadioButtonOptionBFifthQuestion.Size = New System.Drawing.Size(88, 21)
+        Me.RadioButtonOptionBFifthQuestion.Size = New System.Drawing.Size(110, 21)
         Me.RadioButtonOptionBFifthQuestion.TabIndex = 1
         Me.RadioButtonOptionBFifthQuestion.TabStop = True
-        Me.RadioButtonOptionBFifthQuestion.Text = "2. Stop();"
+        Me.RadioButtonOptionBFifthQuestion.Text = "2. Stopwer();"
         Me.RadioButtonOptionBFifthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionAFifthQuestion
@@ -496,10 +514,10 @@ Partial Class FormLevel1Assessment
         Me.RadioButtonOptionCNinthQuestion.AutoSize = True
         Me.RadioButtonOptionCNinthQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCNinthQuestion.Name = "RadioButtonOptionCNinthQuestion"
-        Me.RadioButtonOptionCNinthQuestion.Size = New System.Drawing.Size(87, 21)
+        Me.RadioButtonOptionCNinthQuestion.Size = New System.Drawing.Size(89, 21)
         Me.RadioButtonOptionCNinthQuestion.TabIndex = 2
         Me.RadioButtonOptionCNinthQuestion.TabStop = True
-        Me.RadioButtonOptionCNinthQuestion.Text = "3. Load()"
+        Me.RadioButtonOptionCNinthQuestion.Text = "3. Show()"
         Me.RadioButtonOptionCNinthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBNinthQuestion
@@ -507,10 +525,10 @@ Partial Class FormLevel1Assessment
         Me.RadioButtonOptionBNinthQuestion.AutoSize = True
         Me.RadioButtonOptionBNinthQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBNinthQuestion.Name = "RadioButtonOptionBNinthQuestion"
-        Me.RadioButtonOptionBNinthQuestion.Size = New System.Drawing.Size(89, 21)
+        Me.RadioButtonOptionBNinthQuestion.Size = New System.Drawing.Size(87, 21)
         Me.RadioButtonOptionBNinthQuestion.TabIndex = 1
         Me.RadioButtonOptionBNinthQuestion.TabStop = True
-        Me.RadioButtonOptionBNinthQuestion.Text = "2. Show()"
+        Me.RadioButtonOptionBNinthQuestion.Text = "2. Load()"
         Me.RadioButtonOptionBNinthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionANinthQuestion
@@ -601,10 +619,10 @@ Partial Class FormLevel1Assessment
         Me.RadioButtonOptionCEighthQuestion.AutoSize = True
         Me.RadioButtonOptionCEighthQuestion.Location = New System.Drawing.Point(283, 21)
         Me.RadioButtonOptionCEighthQuestion.Name = "RadioButtonOptionCEighthQuestion"
-        Me.RadioButtonOptionCEighthQuestion.Size = New System.Drawing.Size(87, 21)
+        Me.RadioButtonOptionCEighthQuestion.Size = New System.Drawing.Size(102, 21)
         Me.RadioButtonOptionCEighthQuestion.TabIndex = 2
         Me.RadioButtonOptionCEighthQuestion.TabStop = True
-        Me.RadioButtonOptionCEighthQuestion.Text = "3. Oracle"
+        Me.RadioButtonOptionCEighthQuestion.Text = "3. Microsoft"
         Me.RadioButtonOptionCEighthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionBEighthQuestion
@@ -612,10 +630,10 @@ Partial Class FormLevel1Assessment
         Me.RadioButtonOptionBEighthQuestion.AutoSize = True
         Me.RadioButtonOptionBEighthQuestion.Location = New System.Drawing.Point(18, 62)
         Me.RadioButtonOptionBEighthQuestion.Name = "RadioButtonOptionBEighthQuestion"
-        Me.RadioButtonOptionBEighthQuestion.Size = New System.Drawing.Size(102, 21)
+        Me.RadioButtonOptionBEighthQuestion.Size = New System.Drawing.Size(87, 21)
         Me.RadioButtonOptionBEighthQuestion.TabIndex = 1
         Me.RadioButtonOptionBEighthQuestion.TabStop = True
-        Me.RadioButtonOptionBEighthQuestion.Text = "2. Microsoft"
+        Me.RadioButtonOptionBEighthQuestion.Text = "2. Oracle"
         Me.RadioButtonOptionBEighthQuestion.UseVisualStyleBackColor = True
         '
         'RadioButtonOptionAEighthQuestion
@@ -940,24 +958,6 @@ Partial Class FormLevel1Assessment
         Me.LabelQuestionValueSecondQuestion.Size = New System.Drawing.Size(68, 17)
         Me.LabelQuestionValueSecondQuestion.TabIndex = 33
         Me.LabelQuestionValueSecondQuestion.Text = "Puntos: 1"
-        '
-        'ButtonExit
-        '
-        Me.ButtonExit.Location = New System.Drawing.Point(106, 106)
-        Me.ButtonExit.Name = "ButtonExit"
-        Me.ButtonExit.Size = New System.Drawing.Size(84, 23)
-        Me.ButtonExit.TabIndex = 0
-        Me.ButtonExit.Text = "Salir"
-        Me.ButtonExit.UseVisualStyleBackColor = True
-        '
-        'ButtonCompleteEvaluation
-        '
-        Me.ButtonCompleteEvaluation.Location = New System.Drawing.Point(106, 153)
-        Me.ButtonCompleteEvaluation.Name = "ButtonCompleteEvaluation"
-        Me.ButtonCompleteEvaluation.Size = New System.Drawing.Size(84, 23)
-        Me.ButtonCompleteEvaluation.TabIndex = 1
-        Me.ButtonCompleteEvaluation.Text = "Finalizar"
-        Me.ButtonCompleteEvaluation.UseVisualStyleBackColor = True
         '
         'FormLevel1Assessment
         '

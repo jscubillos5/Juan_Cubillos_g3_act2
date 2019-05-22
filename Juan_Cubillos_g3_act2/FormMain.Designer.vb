@@ -25,6 +25,7 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.MenuStripFormPrincipal = New System.Windows.Forms.MenuStrip()
         Me.EvaluationStep2ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LinkLabelCopyright = New System.Windows.Forms.LinkLabel()
         Me.MenuStripFormPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,7 +35,7 @@ Partial Class FormMain
         Me.MenuStripFormPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EvaluationStep2ToolStripMenuItem})
         Me.MenuStripFormPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripFormPrincipal.Name = "MenuStripFormPrincipal"
-        Me.MenuStripFormPrincipal.Size = New System.Drawing.Size(536, 28)
+        Me.MenuStripFormPrincipal.Size = New System.Drawing.Size(724, 28)
         Me.MenuStripFormPrincipal.TabIndex = 0
         Me.MenuStripFormPrincipal.Text = "MenuStripFormMain"
         '
@@ -44,11 +45,22 @@ Partial Class FormMain
         Me.EvaluationStep2ToolStripMenuItem.Size = New System.Drawing.Size(130, 24)
         Me.EvaluationStep2ToolStripMenuItem.Text = "Evalución Paso 2"
         '
+        'LinkLabelCopyright
+        '
+        Me.LinkLabelCopyright.AutoSize = True
+        Me.LinkLabelCopyright.Location = New System.Drawing.Point(12, 66)
+        Me.LinkLabelCopyright.Name = "LinkLabelCopyright"
+        Me.LinkLabelCopyright.Size = New System.Drawing.Size(77, 17)
+        Me.LinkLabelCopyright.TabIndex = 2
+        Me.LinkLabelCopyright.TabStop = True
+        Me.LinkLabelCopyright.Text = "LinkLabel1"
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 92)
+        Me.ClientSize = New System.Drawing.Size(724, 92)
+        Me.Controls.Add(Me.LinkLabelCopyright)
         Me.Controls.Add(Me.MenuStripFormPrincipal)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStripFormPrincipal
@@ -65,4 +77,5 @@ Partial Class FormMain
 
     Friend WithEvents MenuStripFormPrincipal As MenuStrip
     Friend WithEvents EvaluationStep2ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LinkLabelCopyright As LinkLabel
 End Class

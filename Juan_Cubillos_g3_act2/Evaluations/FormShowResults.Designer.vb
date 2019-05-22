@@ -27,6 +27,7 @@ Partial Class FormShowResults
         Me.DataGridViewResults = New System.Windows.Forms.DataGridView()
         Me.ColumnResultAnswerQuestion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PanelOptions = New System.Windows.Forms.Panel()
+        Me.LabelPercentResult = New System.Windows.Forms.Label()
         Me.LabelResult = New System.Windows.Forms.Label()
         Me.ButtonValidate = New System.Windows.Forms.Button()
         Me.PanelResults.SuspendLayout()
@@ -40,7 +41,7 @@ Partial Class FormShowResults
         Me.PanelResults.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelResults.Location = New System.Drawing.Point(0, 0)
         Me.PanelResults.Name = "PanelResults"
-        Me.PanelResults.Size = New System.Drawing.Size(755, 250)
+        Me.PanelResults.Size = New System.Drawing.Size(755, 369)
         Me.PanelResults.TabIndex = 0
         '
         'DataGridViewResults
@@ -57,7 +58,7 @@ Partial Class FormShowResults
         Me.DataGridViewResults.Name = "DataGridViewResults"
         Me.DataGridViewResults.ReadOnly = True
         Me.DataGridViewResults.RowTemplate.Height = 24
-        Me.DataGridViewResults.Size = New System.Drawing.Size(755, 250)
+        Me.DataGridViewResults.Size = New System.Drawing.Size(755, 369)
         Me.DataGridViewResults.TabIndex = 0
         '
         'ColumnResultAnswerQuestion
@@ -68,27 +69,42 @@ Partial Class FormShowResults
         '
         'PanelOptions
         '
+        Me.PanelOptions.Controls.Add(Me.LabelPercentResult)
         Me.PanelOptions.Controls.Add(Me.LabelResult)
         Me.PanelOptions.Controls.Add(Me.ButtonValidate)
         Me.PanelOptions.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelOptions.Location = New System.Drawing.Point(0, 250)
+        Me.PanelOptions.Location = New System.Drawing.Point(0, 369)
         Me.PanelOptions.Name = "PanelOptions"
-        Me.PanelOptions.Size = New System.Drawing.Size(755, 85)
+        Me.PanelOptions.Size = New System.Drawing.Size(755, 157)
         Me.PanelOptions.TabIndex = 1
+        '
+        'LabelPercentResult
+        '
+        Me.LabelPercentResult.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LabelPercentResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPercentResult.Location = New System.Drawing.Point(7, 70)
+        Me.LabelPercentResult.Name = "LabelPercentResult"
+        Me.LabelPercentResult.Size = New System.Drawing.Size(740, 17)
+        Me.LabelPercentResult.TabIndex = 2
+        Me.LabelPercentResult.Text = "Estimado estudiante de: 00 preguntas usted acerto 00, su total es: 000%"
+        Me.LabelPercentResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LabelResult
         '
-        Me.LabelResult.AutoSize = True
+        Me.LabelResult.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LabelResult.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelResult.Location = New System.Drawing.Point(12, 14)
+        Me.LabelResult.Location = New System.Drawing.Point(7, 24)
         Me.LabelResult.Name = "LabelResult"
-        Me.LabelResult.Size = New System.Drawing.Size(81, 17)
+        Me.LabelResult.Size = New System.Drawing.Size(740, 17)
         Me.LabelResult.TabIndex = 1
         Me.LabelResult.Text = "Resultado"
+        Me.LabelResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ButtonValidate
         '
-        Me.ButtonValidate.Location = New System.Drawing.Point(330, 50)
+        Me.ButtonValidate.Location = New System.Drawing.Point(330, 122)
         Me.ButtonValidate.Name = "ButtonValidate"
         Me.ButtonValidate.Size = New System.Drawing.Size(95, 23)
         Me.ButtonValidate.TabIndex = 0
@@ -99,7 +115,7 @@ Partial Class FormShowResults
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(755, 335)
+        Me.ClientSize = New System.Drawing.Size(755, 526)
         Me.Controls.Add(Me.PanelResults)
         Me.Controls.Add(Me.PanelOptions)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -111,7 +127,6 @@ Partial Class FormShowResults
         Me.PanelResults.ResumeLayout(False)
         CType(Me.DataGridViewResults, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelOptions.ResumeLayout(False)
-        Me.PanelOptions.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -122,4 +137,5 @@ Partial Class FormShowResults
     Friend WithEvents ButtonValidate As Button
     Friend WithEvents ColumnResultAnswerQuestion As DataGridViewTextBoxColumn
     Friend WithEvents LabelResult As Label
+    Friend WithEvents LabelPercentResult As Label
 End Class

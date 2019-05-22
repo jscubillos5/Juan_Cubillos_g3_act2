@@ -7,6 +7,7 @@
     Private Const MAX_SECONDS = 59
     Private Const MAX_MINUTES = 2
     Private Const MIN_FORMAT_SECONDS = 10
+    Private Const FORM_IDEN = 1
     Private studentAnswers() As Integer
     Private correctAnswers() As Integer
     Private resultsAssesment() As String
@@ -113,7 +114,7 @@
         showValidationMessage = False
         Hide()
         Close()
-        Dim formShowResults = New FormShowResults(resultsAssesment, countCorrectAnswers)
+        Dim formShowResults = New FormShowResults(resultsAssesment, countCorrectAnswers, FORM_IDEN)
         formShowResults.ShowDialog()
     End Sub
 
